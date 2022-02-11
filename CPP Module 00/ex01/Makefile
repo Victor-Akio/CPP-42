@@ -19,7 +19,7 @@ $(NAME): $(OBJS)
 	$(CC) -o $@ $^
 
 $(OBJS): $(SRCS)
-	$(CC) $(FLAG) -I *.hpp -c $(SRCS)
+	$(CC) $(FLAG) -c $(SRCS)
 
 clean:
 	$(RM) $(OBJS)

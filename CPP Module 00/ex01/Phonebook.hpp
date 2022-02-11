@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 23:42:33 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/10/05 23:49:19 by vminomiy         ###   ########.fr       */
+/*   Created: 2021/10/05 23:41:08 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/02/11 02:24:20 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#ifndef __PHONEBOOK_H__
+# define __PHONEBOOK_H__
 
-int main(int argc, char const *argv[])
-{
-	if (strcmp(argv[1], "SEARCH") == 0)
-		printf("SEARCH\n");
-	else if (strcmp(argv[1], "ADD") == 0)
-		printf("ADD\n");
-	else if (strcmp(argv[1], "EXIT") == 0)
-		printf("EXIT\n");
-	else
-		printf("FUCK You - %d\n", argc);
-	return 0;
-}
+# include <string>
+# include <iostream>
+# include "Contact.hpp"
 
+class Phonebook {
+	private:
+		int		_index;
+		Contact	_list[8];
+	public:
+		Phonebook();
+		
+		void		set_contact(Contact &newContact);
+		
+		Contact		get_contact(int index);
+		// Contact*	get_all(void);
+		// int			get_index(void);		
+};
+
+#endif

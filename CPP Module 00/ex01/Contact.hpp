@@ -1,30 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 23:11:24 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/02/11 01:21:03 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/02/08 23:19:47 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/02/11 02:29:46 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cstring>
+#ifndef __CONTACT_H__
+# define __CONTACT_H__
 
-int	main(int argc, char **argv)
-{
-	if (argc == 1) {
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *" << std::endl;
-		return (0);
-	}
-	while (--argc) {
-		argv++;
-		for (size_t i = 0; i < strlen(*argv); i++)
-			(*argv)[i] = std::toupper((*argv)[i]);
-		std::cout << *argv << " ";
-	}
-	std::cout << std::endl;
-	return (0);
-}
+#include <iostream>
+
+class Contact {
+	private:
+		std::string _first_name;
+	public:
+		Contact();
+		void	set_first_name(std::string input);
+		// void	set_last_name(std::string input);
+		// void	set_nickname(str::string input);
+		// void	set_phone_number(std::string input);
+		// void	set_darkest_secret(std::string input);
+		std::string	get_first_name(void);		
+};
+
+#endif

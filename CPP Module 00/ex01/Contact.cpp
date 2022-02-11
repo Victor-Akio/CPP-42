@@ -1,20 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/05 23:41:08 by vminomiy          #+#    #+#             */
-/*   Updated: 2021/10/05 23:44:59 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/02/08 23:30:14 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/02/11 01:58:55 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-#ifndef __PHONEBOOK_H__
-#define __PHONEBOOK_H__
+#include "Contact.hpp"
 
-#include <stdio.h>
-#include <string.h>
+Contact::Contact() {
+	_first_name = "";
+	// _last_name = "";
+	// _nickname = "";
+	// _phone_number = "";
+	// _darkest_secret = "";
+}
 
-#endif /* __PHONEBOOK_H__ */
+void	Contact::set_first_name(std::string input) {
+	this->_first_name = input;
+}
+
+std::string Contact::get_first_name(void) {
+	return (this->_first_name);
+}
