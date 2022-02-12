@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 23:41:08 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/02/11 02:24:20 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/02/12 01:00:44 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,18 @@
 # include <iostream>
 # include "Contact.hpp"
 
-class Phonebook {
+class PhoneBook {
 	private:
 		int		_index;
 		Contact	_list[8];
 	public:
-		Phonebook();
+		PhoneBook();
 		
 		void		set_contact(Contact &newContact);
 		
 		Contact		get_contact(int index);
-		// Contact*	get_all(void);
-		// int			get_index(void);		
+		int			get_index(void);		
+		Contact*	get_all(void);
 };
 
 #endif
