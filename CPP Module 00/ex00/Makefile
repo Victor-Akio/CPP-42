@@ -1,6 +1,6 @@
 NAME	=	megaphone
 
-CC		=	clang++
+CC		=	g++
 
 FLAG	=	-c		\
 			-Wall	\

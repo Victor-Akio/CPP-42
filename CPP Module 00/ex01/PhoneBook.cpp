@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/05 23:42:33 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/02/12 01:44:08 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/02/17 01:52:15 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ std::string	get_data(std::string data) {
 	std::cout << "Please, enter the " << data << ": " << std::endl;
 getData:
 	std::getline(std::cin, input);
-	if (std::cin.eof())
-		return "";
-	else if (input.length() == 0) goto getData;
-	else
-		return (input);
+	if (std::cin.eof()) return "";
+	if (input.length() == 0) goto getData;
+	return (input);
 }
 
 PhoneBook::PhoneBook() {
@@ -50,13 +48,19 @@ Contact*	PhoneBook::get_all(void) {
 
 int	get_input(void) {
 	std::string input = "";
+
+	std::cout << "Please, insert a command:" << std::endl;
+	std::cout << "- ADD to save a new contact;" <<std::endl;
+	std::cout << "- SEARCH to find the contact list and display a contact;" <<std::endl;
+	std::cout << "- EXIT to end the application...." <<std::endl;
+	
 	std::cin >> input;
-	if (input == "SEARCH")
+	if (input == "EXIT")
+		return (0);
+	else if (input == "SEARCH")
 		return (1);
 	else if (input == "ADD")
 		return (2);
-	else if (input == "EXIT")
-		return (0);
 	else {
 		std::cout << "Wrong input, please, try again..." << std::endl;
 	}
@@ -87,7 +91,7 @@ int		get_index(int err = 0) {
 	std::cout << "Select the index of the contact:";
 	std::cin >> input;
 	if (input == "") return (-1);
-	if (input.length() != 1 || input[0] < '0' || input[0] > '8') return get_index(1);
+	if (input.length() != 1 || input[0] < '0' || input[0] > '7') return get_index(1);
 	return (input[0] - '0');
 }
 

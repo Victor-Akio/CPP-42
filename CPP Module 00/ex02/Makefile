@@ -1,11 +1,12 @@
-NAME	=	account
+NAME	=	tests
 
-CC		=	clang++
+CC		=	g++
 
 FLAG	=	-c		\
 			-Wall	\
 			-Wextra	\
 			-Werror	\
+			-Wfatal-errors \
 			-std=c++98
 
 RM		=	@/bin/rm -rf

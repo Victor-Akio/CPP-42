@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 23:19:47 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/02/11 22:42:47 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/02/16 23:20:50 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,13 @@ class Contact {
 		std::string	_darkest_secret;
 	public:
 		Contact();
+		
 		void	set_first_name(std::string input);
 		void	set_last_name(std::string input);
 		void	set_nickname(std::string input);
 		void	set_phone_number(std::string input);
 		void	set_darkest_secret(std::string input);
+		
 		std::string	get_first_name(void);
 		std::string	get_last_name(void);
 		std::string get_nickname(void);
