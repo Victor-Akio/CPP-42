@@ -1,4 +1,4 @@
-NAME	=	test
+NAME	=	brains
 
 CC		=	g++
 
@@ -11,7 +11,10 @@ FLAG	=	-c		\
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	main.cpp		\
+			randomChump.cpp	\
+			newZombie.cpp	\
+			Zombie.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)

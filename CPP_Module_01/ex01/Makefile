@@ -1,4 +1,4 @@
-NAME	=	test
+NAME	=	horde
 
 CC		=	g++
 
@@ -11,7 +11,9 @@ FLAG	=	-c		\
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	Zombie.cpp		\
+			zombieHorde.cpp	\
+			main.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
