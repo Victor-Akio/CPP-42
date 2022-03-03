@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 20:40:54 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/03 03:56:48 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/03 19:07:27 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		main(int ac, char **av) {
 		int	i = 0;
 		horde = zombie.zombieHorde(nZombie, name);
 		while (nZombie > i) {
-			std::cout << (i + 1) << " = ";
+			std::cout << (i + 1) << "º ";
 			horde[i].announce();
 			i++;
 		}

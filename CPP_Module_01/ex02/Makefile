@@ -1,4 +1,4 @@
-NAME	=	test
+NAME	=	strings
 
 CC		=	g++
 
@@ -11,7 +11,7 @@ FLAG	=	-c		\
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	main.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
