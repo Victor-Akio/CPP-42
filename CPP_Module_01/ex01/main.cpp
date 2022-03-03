@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/02 20:40:54 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/03 03:38:05 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/03 03:56:48 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ int		main(int ac, char **av) {
 		int	i = 0;
 		horde = zombie.zombieHorde(nZombie, name);
 		while (nZombie > i) {
-			std::cout << i << " = ";
+			std::cout << (i + 1) << " = ";
 			horde[i].announce();
 			i++;
 		}
@@ -42,8 +42,8 @@ int		main(int ac, char **av) {
 		std::cout << nZombie << " Zombies died today!" << std::endl;
 		return (0);
 	} else {
-		std::cout << "Invalid input!\nPlease, use the following syntax to run \
-						the Horde maker:\n\"./horde <number>\"" << std::endl;
+		std::cout << "Invalid input!" << std::endl << 
+		"Please, use the following syntax to run the Horde maker:\n\"./horde <number>\"" << std::endl;
 	}
 	return (1);
 }
