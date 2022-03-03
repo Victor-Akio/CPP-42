@@ -1,4 +1,4 @@
-NAME	=	test
+NAME	=	attack
 
 CC		=	g++
 
@@ -11,7 +11,10 @@ FLAG	=	-c		\
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	main.cpp		\
+			Weapon.cpp		\
+			HumanA.cpp		\
+			HumanB.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
