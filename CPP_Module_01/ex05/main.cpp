@@ -5,30 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/03 19:35:03 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/03 21:34:30 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/04 03:21:05 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/04 03:41:31 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
-#include "Weapon.hpp"
+#include "Karen.hpp"
 
-/*	Pointer and Reference	*/
 int		main(void) {
-	{
-	Weapon club = Weapon("crude spiked club");
-	HumanA bob("Bob", club);
-	bob.attack();
-	club.setType("some other type of club");
-	bob.attack();
-	}
-	{
-	Weapon club = Weapon("crude spiked club");
-	HumanB jim("Jim");
-	jim.setWeapon(club);
-	jim.attack();
-	club.setType("some other type of club");
-	jim.attack();
-	}
+	std::cout << "Karen vai reclamar!" << std::endl;
+	return (0);
 }
