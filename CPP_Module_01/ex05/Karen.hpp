@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 03:21:30 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/04 03:22:52 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/04 22:58:15 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,14 @@
 
 class Karen {
 	private:
+		void	debug(void);
+		void	info(void);
+		void	warning(void);
+		void	error(void);
 	public:
 		Karen(void);
 		~Karen(void);
-}
+		void	complain(std::string level);
+};
 
 #endif

@@ -1,4 +1,4 @@
-NAME	=	test
+NAME	=	karen
 
 CC		=	g++
 
@@ -9,15 +9,18 @@ FLAG	=	-c		\
 			-Wfatal-errors \
 			-std=c++98
 
+SANIT	=	-fsanitize=address
+
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	main.cpp		\
+			Karen.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) -o $@ $^
+	$(CC) $(SANIT) -o $@ $^
 
 $(OBJS): $(SRCS)
 	$(CC) $(FLAG) -c $(SRCS)
