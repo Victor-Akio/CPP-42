@@ -1,4 +1,4 @@
-NAME	=	karenFilter
+NAME	=	fixed
 
 CC		=	g++
 
@@ -14,7 +14,7 @@ SANIT	=	-fsanitize=address
 RM		=	@/bin/rm -rf
 
 SRCS	=	main.cpp		\
-			Karen.cpp
+			Fixed.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)

@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 23:25:48 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/09 01:32:04 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/09 01:31:55 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 # define FIXED_HPP
 
 # include <iostream>
+# include <cmath>
 
-/*	OVERLOAD
-**	https://www.tutorialspoint.com/cplusplus/cpp_overloading.htm
+/*	Copy Constructor - https://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm
+**	Copy Assignment Operator - https://en.cppreference.com/w/cpp/language/copy_assignment
 */
 class	Fixed {
 	private:
@@ -26,9 +27,16 @@ class	Fixed {
 		Fixed(void);
 		~Fixed(void);
 		Fixed(const Fixed &obj);
+		Fixed(const int fixedPointValue);
+		Fixed(const float floatPointValue);
 		Fixed &operator=(Fixed const &obj);
-		int		getRawBits(void) const;
-		void	setRawBits(int const raw);
+		float	toFloat(void) const;
+		int		toInt(void) const;
 };
+
+/*	An overload of the insertion («) operator that inserts a floating-point representation
+**	of the fixed-point number into the output stream object passed as parameter.
+*/
+std::ostream	&operator<<(std::ostream &os, Fixed const &obj);
 
 #endif
