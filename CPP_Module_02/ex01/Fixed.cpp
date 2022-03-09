@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 23:27:29 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/09 01:45:43 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/10 00:41:54 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,13 @@ Fixed::Fixed(const Fixed &obj) {
 	*this = obj;
 }
 
+// Construtor de ponto fixo
 Fixed::Fixed(const int fixedPointValue) {
 	std::cout << "Int constructor called" << std::endl;
 	Fixed::rawBits = fixedPointValue << Fixed::fractionalBits;
 }
 
+//	Construtor de ponto flutuante
 Fixed::Fixed(const float floatPointValue) {
 	std::cout << "Float constructor called" << std::endl;
 	Fixed::rawBits = roundf(floatPointValue  * (1 << Fixed::fractionalBits));
@@ -48,13 +50,9 @@ Fixed	&Fixed::operator=(Fixed const &obj) {
 	return (*this);
 }
 
-float	Fixed::toFloat(void) const {
-	return ((float)Fixed::rawBits / (1 << Fixed::fractionalBits));
-}
-
-int		Fixed::toInt(void) const {
-	return (Fixed::rawBits / (1 << Fixed::fractionalBits));
-}
+//	Os conversores para float e para int.
+float	Fixed::toFloat(void) const {return ((float)Fixed::rawBits / (1 << Fixed::fractionalBits));}
+int		Fixed::toInt(void) const {return (Fixed::rawBits / (1 << Fixed::fractionalBits));}
 
 std::ostream	&operator<<(std::ostream &os, Fixed const &obj) {
 	os << obj.toFloat();

@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 23:25:48 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/09 01:31:55 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/09 23:34:04 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,6 @@
 # include <iostream>
 # include <cmath>
 
-/*	Copy Constructor - https://www.tutorialspoint.com/cplusplus/cpp_copy_constructor.htm
-**	Copy Assignment Operator - https://en.cppreference.com/w/cpp/language/copy_assignment
-*/
 class	Fixed {
 	private:
 		int					rawBits;
@@ -32,11 +29,32 @@ class	Fixed {
 		Fixed &operator=(Fixed const &obj);
 		float	toFloat(void) const;
 		int		toInt(void) const;
+		int		getRawBits(void) const;
+		//	MAX/MIN OPERATORS OVERLOAD
+		static Fixed &min(Fixed &x, Fixed &y);
+		static const Fixed &min(Fixed const &x, Fixed const &y);
+		static Fixed &max(Fixed &x, Fixed &y);
+		static const Fixed &max(Fixed const &x, Fixed const &y);
+		//	INC/DECR OPERATORS OVERLOAD - https://en.cppreference.com/w/cpp/language/operator_incdec
+		Fixed	operator++(void);
+		Fixed	operator--(void);
+		Fixed	operator++(int);
+		Fixed	operator--(int);
 };
 
-/*	An overload of the insertion («) operator that inserts a floating-point representation
-**	of the fixed-point number into the output stream object passed as parameter.
-*/
 std::ostream	&operator<<(std::ostream &os, Fixed const &obj);
+
+// COMPARISON OVERLOAD - https://en.cppreference.com/w/cpp/language/operator_comparison
+bool	operator>(Fixed const &num, Fixed const &obj);
+bool	operator<(Fixed const &num, Fixed const &obj);
+bool	operator>=(Fixed const &num, Fixed const &obj);
+bool	operator<=(Fixed const &num, Fixed const &obj);
+bool	operator==(Fixed const &num, Fixed const &obj);
+bool	operator!=(Fixed const &num, Fixed const &obj);
+// ARITHMETIC OPERATORS OVERLOAD - https://en.cppreference.com/w/cpp/language/operator_arithmetic
+Fixed	operator+(Fixed const &num, Fixed const &obj);
+Fixed	operator-(Fixed const &num, Fixed const &obj);
+Fixed	operator*(Fixed const &num, Fixed const &obj);
+Fixed	operator/(Fixed const &num, Fixed const &obj);
 
 #endif
