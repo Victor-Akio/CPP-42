@@ -1,4 +1,4 @@
-NAME	=	tests
+NAME	=	cpp
 
 CC		=	g++
 
@@ -13,7 +13,7 @@ SANIT	=	-fsanitize=address
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	./*.cpp
+SRCS	=	main.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)

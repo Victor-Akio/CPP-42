@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/07 23:27:29 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/10 00:41:31 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/10 20:34:08 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,8 @@ Fixed	&Fixed::operator=(Fixed const &obj) {
 }
 
 Fixed	&Fixed::min(Fixed &x, Fixed &y) {return(x < y ? x : y);}
-Fixed	const &Fixed::min(Fixed const &x, Fixed const &y) {return(x > y ? x : y);}
-Fixed	&Fixed::max(Fixed &x, Fixed &y) {return(x < y ? x : y);}
+Fixed	const &Fixed::min(Fixed const &x, Fixed const &y) {return(x < y ? x : y);}
+Fixed	&Fixed::max(Fixed &x, Fixed &y) {return(x > y ? x : y);}
 Fixed	const &Fixed::max(Fixed const &x, Fixed const &y) {return(x > y ? x : y);}
 
 Fixed	Fixed::operator++(void) {
