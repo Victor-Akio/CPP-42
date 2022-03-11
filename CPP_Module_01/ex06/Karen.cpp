@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 03:22:07 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/07 22:34:19 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:03:29 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,6 @@ void        Karen::filter(std::string level) {
 	switch(i) {
 		case 0:
 			(this->*(outputF[0]))();
-			
 			__attribute__ ((fallthrough));
 		case 1:
 			(this->*(outputF[1]))();
