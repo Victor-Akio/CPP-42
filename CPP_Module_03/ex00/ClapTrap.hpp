@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:16:48 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/11 00:50:31 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/11 22:50:03 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,10 +25,10 @@ class ClapTrap {
 		ClapTrap(void);
 		~ClapTrap(void);
 		ClapTrap(ClapTrap const &obj);
-		ClapTrap &operator=(ClapTrap const &obj);
-		void attack(const std::string& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
+		ClapTrap	&operator=(ClapTrap const &obj);
+		void		attack(const std::string& target);
+		void		takeDamage(unsigned int amount);
+		void		beRepaired(unsigned int amount);
 };
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:20:07 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/11 22:05:58 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/12 00:22:25 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@ ClapTrap::ClapTrap(void):_name("CL4P-TP"), _hitPoints(10), _energyPoints(10), _a
 
 //	Destructor
 ClapTrap::~ClapTrap(void) {
-	std::cout << "Destructor called" << std::endl;
+	std::cout << ClapTrap::_name << ": Destructor called" << std::endl;
 }
 
 //	Copy Cosntructor
 ClapTrap::ClapTrap(ClapTrap const &obj) {
-	std::cout << "Copy Constructor called" << std::endl;
+	std::cout << ClapTrap::_name << ": Copy Constructor called" << std::endl;
 	*this = obj;
 }
 

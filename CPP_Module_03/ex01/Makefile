@@ -13,8 +13,9 @@ SANIT	=	-fsanitize=address
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	main.cpp	\
-			ClapTrap.cpp
+SRCS	=	main.cpp		\
+			ClapTrap.cpp	\
+			ScavTrap.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
