@@ -2,11 +2,13 @@ NAME	=	diamondtrap
 
 CC		=	g++
 
-FLAG	=	-c		\
-			-Wall	\
-			-Wextra	\
-			-Werror	\
-			-Wfatal-errors \
+FLAG	=	-c				\
+			-Wall			\
+			-Wextra			\
+			-Werror			\
+			-Wshadow		\
+			-Wno-shadow		\
+			-Wfatal-errors	\
 			-std=c++98
 
 SANIT	=	-fsanitize=address

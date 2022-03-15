@@ -6,14 +6,15 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/15 22:20:40 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 23:24:35 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/15 23:58:53 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(std::string _name) {
-	DiamondTrap::_name = _name + "_clap_name";
+	DiamondTrap::_name = _name;
+	ClapTrap::_name = DiamondTrap::_name + "_clap_name";
 	DiamondTrap::_hitPoints = FragTrap::_hitPoints;
 	DiamondTrap::_energyPoints = ScavTrap::_energyPoints;
 	DiamondTrap::_attackDamage = FragTrap::_attackDamage;
@@ -76,8 +77,7 @@ void		DiamondTrap::beRepaired(unsigned int amount) {
 }
 
 void		DiamondTrap::whoAmI(void) {
-	std::cout << DiamondTrap::_name << "says:" << std::endl;
-	std::cout << "You are " << ClapTrap::_name <<std::endl;
-	std::cout << "while " << ClapTrap::_name << "says:" << std::endl;
-	std::cout << "and You are " << DiamondTrap::_name << "." << std::endl;
+	std::cout << DiamondTrap::_name << " says: You are " << ClapTrap::_name << " ..." <<std::endl;
+	std::cout << "Surprized... He turns arround.. looked in his eyes." << std::endl;
+	std::cout << ClapTrap::_name << " says: And You are " << DiamondTrap::_name << "..." << std::endl;
 }

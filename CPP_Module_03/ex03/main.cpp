@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 23:31:20 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/16 00:00:12 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -186,11 +186,6 @@ int		main(int ac, char **av) {
 		case 3:
 			{
 				std::cout << "Lika a Diamond in the skies..." << std::endl;
-				/*	Isso ocorre, por causa da inicialização dos construtores, na ordem:
-					ClapTrap -> ScavTrap -> FragTrap -> DiamondTrap.
-					Onde o último nome atribuído antes de DiamonTrap, será o nome do FragTrap
-				*/
-				std::cout << "Remember that after all constructors... ClapTrap's name will be FragTrap's name." << std::endl;
 				diamondtrap();
 				return (0);
 			}
