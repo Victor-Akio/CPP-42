@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 22:19:49 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 21:49:02 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/15 23:05:52 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,8 @@
 
 /*	INHERITANCE and DERIVED CLASS
 **	https://en.cppreference.com/w/cpp/language/derived_class
-**	Os destruidores para objetos dos membros não estáticos são chamados na ordem inversa em que aparecem na declaração da classe.
 */
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 	public:
 		ScavTrap(void);
 		~ScavTrap(void);

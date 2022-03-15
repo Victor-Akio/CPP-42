@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/11 22:19:27 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 22:02:33 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/15 23:19:14 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ScavTrap::ScavTrap(void) {
 }
 
 ScavTrap::~ScavTrap(void) {
-	std::cout << ScavTrap::_name << ": Destructor called" << std::endl;
+	std::cout << "SC4V-TP: Destructor called" << std::endl;
 }
 
 ScavTrap::ScavTrap(ScavTrap const &obj): ClapTrap(obj) {

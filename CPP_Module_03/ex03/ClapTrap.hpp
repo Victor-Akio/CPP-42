@@ -1,35 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ScavTrap.hpp                                       :+:      :+:    :+:   */
+/*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/11 22:19:49 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 21:49:02 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/10 01:16:48 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/12 00:28:26 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef CLAPTRAP_HPP
+# define CLAPTRAP_HPP
 
 #include <iostream>
-#include "ClapTrap.hpp"
 
-/*	INHERITANCE and DERIVED CLASS
-**	https://en.cppreference.com/w/cpp/language/derived_class
-**	Os destruidores para objetos dos membros não estáticos são chamados na ordem inversa em que aparecem na declaração da classe.
+/*	PROTECTED MEMBER
+**	Para uma classe herdar um membro privado haveria necessidade de faze-lo "friend";
+**	Alternativamente, sem manter o membro como publico, existe a opção protegido, que 
+**	permite um polimorfismo controlado para a classe derivada. 
 */
-class ScavTrap : public ClapTrap {
+class ClapTrap {
+	private:
+	protected:
+		std::string	_name;
+		int			_hitPoints;
+		int			_energyPoints;
+		int			_attackDamage;
 	public:
-		ScavTrap(void);
-		~ScavTrap(void);
-		ScavTrap(ScavTrap const &obj);
-		ScavTrap	&operator=(ScavTrap const &obj);
+		ClapTrap(void);
+		~ClapTrap(void);
+		ClapTrap(ClapTrap const &obj);
+		ClapTrap	&operator=(ClapTrap const &obj);
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
 		void		beRepaired(unsigned int amount);
-		void		guardGate(void);
 };
 
 #endif
