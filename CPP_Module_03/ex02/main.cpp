@@ -6,12 +6,13 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/15 00:56:27 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/15 01:35:06 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 void	claptrap(void) {
 	{
@@ -66,22 +67,51 @@ void	scavtrap(void) {
 	}
 }
 
-void	invArg(void) {
-	std::cout << "Error - Invalid arguments." << std::endl;
-	std::cout << "Please, use the following syntax: \"./scavtrap <model_number>\"" << std::endl;
-	std::cout << "Being binary, you may choose 0 or 1 .... )" << std::endl;
+void	fragtrap(void) {
+	{
+		FragTrap	FragTrap;
+
+		for (int i = 0; i < 101; i++) {
+			FragTrap.attack("Barrels");
+		}
+	}
+	{
+		FragTrap	FragTrap;
+
+		FragTrap.takeDamage(99);
+		for (int i = 0; i < 101; i++) {
+			FragTrap.beRepaired(1);
+		}
+	}
+	{
+		FragTrap	FragTrap;
+
+		FragTrap.takeDamage(100);
+		FragTrap.takeDamage(10);
+	}
+	{
+		FragTrap	FragTrap;
+
+		FragTrap.highFivesGuys();
+	}
 }
 
-//	Serena, my love!
+void	invArg(void) {
+	std::cout << "Error - Invalid arguments." << std::endl;
+	std::cout << "Please, use the following syntax: \"./fragtrap <model_number>\"" << std::endl;
+	std::cout << "ClapTrap is 0, ScavTrap is 1 and FragTrap is 2." << std::endl;
+}
+
+//	Repetitive work
 int		main(int ac, char **av) {
-	int			x = 2;
-	std::string	list[x] = {"0", "1"};
+	int			x = 3;
+	std::string	list[x] = {"0", "1", "2"};
 	int			i = 0;
 
 	if (ac != 2) {
 		std::cout << "Error - Wrong number of arguments." << std::endl;
-		std::cout << "Please, use the following syntax: \"./scavtrap <model_number>\"" << std::endl;
-		std::cout << "Being binary, you may choose 0 or 1 .... )" << std::endl;
+		std::cout << "Please, use the following syntax: \"./fragtrap <model_number>\"" << std::endl;
+		std::cout << "ClapTrap is 0, ScavTrap is 1 and FragTrap is 2." << std::endl;
 		return (1);
 	}
 	while (i < x && list[i] != av[1]) i++;
@@ -100,6 +130,12 @@ int		main(int ac, char **av) {
 			{
 				std::cout << "Using some random ScavTraps, instead ..." << std::endl;
 				scavtrap();
+				return (0);
+			}
+		case 2:
+			{
+				std::cout << "For some Frag NADES Traps..." << std::endl;
+				fragtrap();
 				return (0);
 			}
 		default:
