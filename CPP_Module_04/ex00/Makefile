@@ -1,4 +1,4 @@
-NAME	=	cpp
+NAME	=	makesounds
 
 CC		=	g++
 
@@ -15,7 +15,12 @@ SANIT	=	-fsanitize=address
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp		\
+			AnimalClass.cpp	\
+			DogClass.cpp	\
+			CatClass.cpp	\
+			WrongAnimal.cpp	\
+			WrongCat.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
