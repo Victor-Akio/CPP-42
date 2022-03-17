@@ -1,24 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BrainClass.hpp                                     :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/16 02:50:51 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/16 02:52:34 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/16 00:17:46 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/16 18:39:49 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef BRAINCLASS_HPP
-# define BRAINCLASS_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
 
-class Brain {
+class Animal {
 	private:
 	protected:
+		std::string		type;
 	public:
+		Animal(void);
+		virtual ~Animal(void);
+		Animal(Animal const &obj);
+		Animal	&operator=(Animal const &obj);
+		std::string		getType(void) const;
+		virtual void	makeSound(void) const;
 };
 
 #endif

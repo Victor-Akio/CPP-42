@@ -16,9 +16,12 @@ SANIT	=	-fsanitize=address
 RM		=	@/bin/rm -rf
 
 SRCS	=	main.cpp		\
-			AnimalClass.cpp	\
-			DogClass.cpp	\
-			CatClass.cpp	\
+			zeroZero.cpp	\
+			zeroUm.cpp		\
+			Animal.cpp	\
+			Dog.cpp	\
+			Cat.cpp	\
+			Brain.cpp	\
 			WrongAnimal.cpp	\
 			WrongCat.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)

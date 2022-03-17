@@ -12,6 +12,7 @@
 
 #include "WrongCat.hpp"
 
+//	Igual porém errado - Olhar atentamente o seu som.
 WrongCat::WrongCat(void) {
 	WrongCat::type = "Tiger";
 	std::cout << WrongCat::type << ": Default Constructor Called." << std::endl;

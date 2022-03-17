@@ -12,6 +12,7 @@
 
 #include "WrongAnimal.hpp"
 
+//	Igual porém errado - Olhar atentamente o seu som.
 WrongAnimal::WrongAnimal(void) {
 	WrongAnimal::type = "Pikachu";
 	std::cout << WrongAnimal::type << "/WrongAnimal: Default Constructor Called." << std::endl;

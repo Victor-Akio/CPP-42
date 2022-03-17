@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   zeroZero.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/16 18:40:42 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/16 17:51:41 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/16 17:51:57 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Dog.hpp"
-#include "Cat.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Main.hpp"
 
-//	Polymorphism
-int main(void) {
+void	ex00(void) {
 	{
 		const Animal* meta = new Animal();
 		const Animal* j = new Dog();
@@ -59,5 +54,4 @@ int main(void) {
 		std::cout << "[Freeing WrongAnimal]" << std::endl;
 		delete meta;
 	}
-	return 0;
 }

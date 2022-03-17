@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AnimalClass.hpp                                    :+:      :+:    :+:   */
+/*   Animal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,11 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMALCLASS_HPP
-# define ANIMALCLASS_HPP
+#ifndef ANIMAL_HPP
+# define ANIMAL_HPP
 
 #include <iostream>
 
+/*	ABSTRACT CLASS
+**	https://www.tutorialspoint.com/cplusplus/cpp_interfaces.htm
+**	Quando se abstrai uma função, a classe fica categorizada como abstrata.
+**	Servindo apenas de interface.
+*/
 class Animal {
 	private:
 	protected:
@@ -24,8 +29,10 @@ class Animal {
 		virtual ~Animal(void);
 		Animal(Animal const &obj);
 		Animal	&operator=(Animal const &obj);
-		std::string		getType(void) const;
-		virtual void	makeSound(void) const;
+		std::string			getType(void) const;
+		virtual void		makeSound(void) const = 0;
+		virtual std::string	getBrainIdeas(int index) const = 0;
+		virtual void		setBrainIdeas(int index, std::string obj) = 0;
 };
 
 #endif
