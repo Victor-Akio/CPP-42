@@ -1,39 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Form.hpp                                           :+:      :+:    :+:   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/18 08:50:49 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/23 02:05:52 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/10 01:16:48 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/23 22:13:23 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FORM_HPP
-# define FORM_HPP
+#ifndef BUREAUCRAT_HPP
+# define BUREAUCRAT_HPP
 
-class Form;
+# include <iostream>
+# include <exception>
+# include "Form.hpp"
 class Bureaucrat;
-#include "Bureaucrat.hpp"
 
-class Form {
+# define HIGHEST_GRADE 1
+# define LOWEST_GRADE 150
+
+class Bureaucrat {
 	private:
-		Form(void);
 		std::string const	name;
-		int const			signGrade;
-		int const			execGrade;
-		bool				isSigned;
+		int					grade;
+		Bureaucrat(void);
 	protected:
 	public:
-		Form(std::string const &_name, int const _signGrade, int const _execGrade);
-		virtual ~Form(void);
-		Form(Form const &copy);
-		Form &operator=(Form const &copy);
+		Bureaucrat(std::string const &_name, int _grade);
+		virtual ~Bureaucrat(void);
+		Bureaucrat(const Bureaucrat &copy);
+		Bureaucrat	&operator=(const Bureaucrat &copy);
 		//	Getter das informações necessárias;
 		std::string const	&getName(void) const;
-		int					getSignGrade(void) const;
-		int					getExecGrade(void) const;
+		int					getGrade(void) const;
 		//	exception classes
 		class GradeTooHighException: public std::exception {
 			virtual const char *what() const throw();
@@ -41,15 +42,15 @@ class Form {
 		class GradeTooLowException: public std::exception {
 			virtual const char *what() const throw();
 		};
-		class FormIsSignedException: public std::exception {
-			virtual const char *what() const throw();
-		};
 		//	Operation classes
-		bool	getSigned(void) const;
-		void	beSigned(Bureaucrat const &copy);
+		void	increaseGrade(void);
+		void	decreaseGrade(void);
+		void	changeGrade(int	ranks);
+		void	signForm(Form &form) const;
+		void	executeForm(Form const &form) const;
 };
 
 //	override da <<
-std::ostream	&operator<<(std::ostream &os, const Form &obj);
+std::ostream	&operator<<(std::ostream &os, const Bureaucrat &copy);
 
 #endif

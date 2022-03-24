@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 08:59:35 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/23 02:05:41 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/24 00:34:25 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ Form	&Form::operator=(const Form &copy){
 const char	*Form::GradeTooHighException::what() const throw() { return ("Exception - Grade too High!!"); }
 const char	*Form::GradeTooLowException::what() const throw() { return ("Exception - Grade too Low!!"); }
 const char	*Form::FormIsSignedException::what() const throw() { return ("Exception - Form is signed already!!"); }
+const char	*Form::FormIsNotSignedException::what() const throw() { return ("Exception - Form is not signed yet!!"); }
 
 //	Funções Getter
 std::string const	&Form::getName(void) const { return (Form::name); }
@@ -73,4 +74,12 @@ std::ostream	&operator<<(std::ostream &os, const Form &obj) {
 		<< "\nSignGrade: " << obj.getSignGrade() << " and ExecGrade: " << obj.getExecGrade()
 		<< "." << std::endl;
 	return (os);
+}
+
+//	executor
+void		Form::execute(Bureaucrat const &executor) const {
+	if (!Form::isSigned)
+		throw Form::FormIsNotSignedException();
+	if (Form::getExecGrade() < executor.getGrade())
+		throw Bureaucrat::GradeTooLowException();
 }

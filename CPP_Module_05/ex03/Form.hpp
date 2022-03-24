@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/18 08:50:49 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/23 02:05:52 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/23 02:04:39 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,13 @@ class Bureaucrat;
 
 class Form {
 	private:
-		Form(void);
 		std::string const	name;
 		int const			signGrade;
 		int const			execGrade;
 		bool				isSigned;
 	protected:
 	public:
+		Form(void);
 		Form(std::string const &_name, int const _signGrade, int const _execGrade);
 		virtual ~Form(void);
 		Form(Form const &copy);
@@ -34,6 +34,7 @@ class Form {
 		std::string const	&getName(void) const;
 		int					getSignGrade(void) const;
 		int					getExecGrade(void) const;
+		bool				getSigned(void) const;
 		//	exception classes
 		class GradeTooHighException: public std::exception {
 			virtual const char *what() const throw();
@@ -44,9 +45,12 @@ class Form {
 		class FormIsSignedException: public std::exception {
 			virtual const char *what() const throw();
 		};
+		class FormIsNotSignedException: public std::exception {
+			virtual const char *what() const throw();
+		};
 		//	Operation classes
-		bool	getSigned(void) const;
-		void	beSigned(Bureaucrat const &copy);
+		void				beSigned(Bureaucrat const &copy);
+		virtual void		execute(Bureaucrat const &copy) const = 0;
 };
 
 //	override da <<
