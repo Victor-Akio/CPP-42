@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/25 00:39:38 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/26 15:21:51 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,7 @@ int		main(int ac, char **av) {
 		invArg();
 		return (1);
 	} else {
-		convert.conversor(av[1]);
+		convert.conversor(arg);
 	}
 	return (0);
 }
-
