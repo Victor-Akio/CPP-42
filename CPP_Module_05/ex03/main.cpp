@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/24 02:08:23 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/24 23:46:43 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	invArg(void) {
 	std::cout << "Please, use the following syntax: \"./forms <model_number>\"" << std::endl;
 	std::cout << "Or use the flag \"-e\" to see the exceptions: \"./forms -e <exercise_type>\"";
-	std::cout << "Forms avalilable: bureaucrat, shrubbery, robotomy, presidential or Intern" << std::endl;
+	std::cout << "Forms avalilable: bureaucrat, shrubbery, robotomy, presidential or intern" << std::endl;
 }
 
 int		switchCase(int i, bool e) {

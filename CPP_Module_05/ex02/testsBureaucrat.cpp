@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/22 15:56:53 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/23 23:08:32 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/24 23:46:23 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ void	bureaucratExceptions(void) {
 		std::cout << "[Skyrocket?]\n" << std::endl;
 		Bureaucrat bureaucrat("SuperStar", 150);
 		try {
-			bureaucrat.changeGrade(149);
+			bureaucrat.changeGrade(151);
 			std::cout << bureaucrat << std::endl;
 		}
 		catch (std::exception const &e) {
