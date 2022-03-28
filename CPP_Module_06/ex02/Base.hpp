@@ -18,6 +18,7 @@
 # include <ctime>
 
 //	Casting - https://www.tutorialspoint.com/cplusplus/cpp_casting_operators.htm
+//	clase base
 class Base {
 	private:
 	protected:
@@ -25,10 +26,12 @@ class Base {
 		virtual ~Base(void);
 };
 
+//	classes derivadas
 class A : public Base {};
 class B : public Base {};
 class C : public Base {};
 
+//	funções mandatórias
 Base	*generate(void);
 void	identify(Base *p);
 void	identify(Base &p);

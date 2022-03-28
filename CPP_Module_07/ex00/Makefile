@@ -15,8 +15,7 @@ SANIT	=	-fsanitize=address
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	main.cpp		\
-			Base.cpp
+SRCS	=	main.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)

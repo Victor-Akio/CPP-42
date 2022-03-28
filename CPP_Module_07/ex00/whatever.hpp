@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   whatever.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/28 19:20:04 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/25 00:00:06 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/28 19:59:09 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
-void	invArg(void) {
-	std::cout << "Please, use the following syntax: \"./convert <argument>\"" << std::endl;
+#include <iostream>
+
+/*	TEMPLATES
+**	https://en.cppreference.com/w/cpp/language/templates
+**	Basicamente, define uma familia de classe ou objetos
+*/
+template<typename T>
+T max(T x, T y) {return (x > y ? x : y); }
+
+template<typename T>
+T min(T x, T y) {return (x < y ? x : y); }
+
+template<typename T>
+void swap(T &x, T &y) {
+	T	tmp = x;
+	x = y;
+	y = tmp;
 }
 
-int		main(int ac, char **av) {
-	Convert		convert;
-	
-	if (ac != 2) {
-		std::cout << "Error - Wrong number of arguments." << std::endl;
-		invArg();
-		return (1);
-	} else {
-		convert.conversor(av[1]);
-	}
-	return (0);
-}
+#endif
