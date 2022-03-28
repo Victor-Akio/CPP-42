@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Main.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 00:00:06 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/28 07:05:47 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/28 07:14:25 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef _HPP
-# define _HPP
+#ifndef BASE_HPP
+# define BASE_HPP
 
-#include <iostream>
+# include <iostream>
+# include <cstdlib>
+# include <ctime>
+
+//	Casting - https://www.tutorialspoint.com/cplusplus/cpp_casting_operators.htm
+class Base {
+	private:
+	protected:
+	public:
+		virtual ~Base(void);
+};
+
+class A : public Base {};
+class B : public Base {};
+class C : public Base {};
+
+Base	*generate(void);
+void	identify(Base *p);
+void	identify(Base &p);
 
 #endif
