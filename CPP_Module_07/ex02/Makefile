@@ -1,4 +1,4 @@
-NAME	=	whatever
+NAME	=	array
 
 CC		=	g++
 
@@ -16,11 +16,11 @@ SANIT	=	-fsanitize=address
 RM		=	@/bin/rm -rf
 
 SRCS	=	main.cpp
-OBJS 	=	$(SRCS:%.cpp=%.o)
+OBJS	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) $(TEMP)
 	$(CC) $(SANIT) -o $@ $^
 
 $(OBJS): $(SRCS)

@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 00:36:43 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/26 02:15:06 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/28 21:23:06 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	Convert::convertInt(std::string arg) {
 void	Convert::convertFloat(std::string arg) {
 	try {
 		if ( arg[0] && arg.length() == 1 && isalpha(arg[0]) ) {
-			std::cout << "double: " << static_cast<float>(arg[0]) << ".0f" << std::endl;
+			std::cout << "float: " << static_cast<float>(arg[0]) << ".0f" << std::endl;
 			return ;
 		}
 		float num = static_cast<float>(std::strtod(arg.c_str(), NULL));

@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/26 16:13:48 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/28 20:54:33 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ uintptr_t	serialize(Data* ptr) {
 Data		*deserialize(uintptr_t raw) { return (reinterpret_cast<Data *>(raw)); }
 
 int		main(void) {
-	std::cout << "Gariadno" << std::endl;
+	std::cout << "[Serialize e G]" << std::endl;
 	Data	*ptr = new Data();
 
 	if (!ptr)
