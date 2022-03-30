@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 06:36:54 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/29 07:26:47 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/29 07:42:01 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <cstring>
 # include <cstdlib>
 
-# define MAX_VAL 750
+# define MAX_VAL 20
 
 template<typename T>
 class Array {

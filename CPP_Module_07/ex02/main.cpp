@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/29 06:37:57 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/29 07:36:02 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/29 07:41:27 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int		main(void) {
 
 		std::cout << "[Randomize again the array...]" << std::endl;
 		for (int i = 0; i < MAX_VAL; i++) {
-			numbers[i] = rand();
+			numbers[i] = std::rand();
 			std::cout << "| " << numbers[i];
 		}
 		std::cout << std::endl;
