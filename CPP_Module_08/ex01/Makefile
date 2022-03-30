@@ -1,4 +1,4 @@
-NAME	=	cpp
+NAME	=	span
 
 CC		=	g++
 
@@ -15,7 +15,8 @@ SANIT	=	-fsanitize=address
 
 RM		=	@/bin/rm -rf
 
-SRCS	=	main.cpp
+SRCS	=	main.cpp		\
+			Span.cpp
 OBJS 	=	$(SRCS:%.cpp=%.o)
 
 all: $(NAME)

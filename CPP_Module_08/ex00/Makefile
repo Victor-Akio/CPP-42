@@ -1,4 +1,4 @@
-NAME	=	cpp
+NAME	=	easyfind
 
 CC		=	g++
 
