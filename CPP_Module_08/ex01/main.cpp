@@ -6,7 +6,7 @@
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/30 11:13:57 by vminomiy         ###   ########.fr       */
+/*   Updated: 2022/03/30 19:47:53 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,28 +85,32 @@ void	invArg(void) {
 }
 
 void	sizeTest(unsigned int size) {
-	std::cout << "[An storage of " << size << " integers was created]" << std::endl;
-	srand((unsigned)time(NULL));
-	
-	Span				span = Span(size);
-	std::vector<int>	tmp;
-	for (unsigned int i = 0; i < size; i++)
-		tmp.push_back(rand() % 10000);
-	span.addNumber(tmp.begin(), tmp.end());
-	std::cout << "[With all set, than the shortest span is...]" << std::endl;
-	std::cout << span.shortestSpan() << std::endl;
-	std::cout << "[and the longest span is...]" << std::endl;
-	std::cout << span.longestSpan() << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
-	//	Eu recomendo remoção para testes maiores
-	std::cout << "[Your call - Print the storage.]" << std::endl;
-	std::cout << "Storage: [";
-	unsigned int	len = tmp.size();
-	for (unsigned int i = 0; i < (len - 1); i++) {
-		std::cout << tmp[i] << ", ";
+	try {
+		std::cout << "[An storage of " << size << " integers was created]" << std::endl;
+		srand((unsigned)time(NULL));
+		
+		Span				span = Span(size);
+		std::vector<int>	tmp;
+		for (unsigned int i = 0; i < size; i++)
+			tmp.push_back(rand() % 10000);
+		span.addNumber(tmp.begin(), tmp.end());
+		std::cout << "[With all set, than the shortest span is...]" << std::endl;
+		std::cout << span.shortestSpan() << std::endl;
+		std::cout << "[and the longest span is...]" << std::endl;
+		std::cout << span.longestSpan() << std::endl;
+		std::cout << "------------------------------------------------------" << std::endl;
+		//	Eu recomendo remoção para testes maiores
+		std::cout << "[Your call - Print the storage.]" << std::endl;
+		std::cout << "Storage: [";
+		unsigned int	len = tmp.size();
+		for (unsigned int i = 0; i < (len - 1); i++) {
+			std::cout << tmp[i] << ", ";
+		}
+		std::cout << tmp[len - 1] << "]" << std::endl;
+		std::cout << "------------------------------------------------------" << std::endl;
+	} catch (const std::exception &e) {
+		std::cerr << e.what() << std::endl;
 	}
-	std::cout << tmp[len - 1] << "]" << std::endl;
-	std::cout << "------------------------------------------------------" << std::endl;
 }
 
 int		argParser(char *arg) {

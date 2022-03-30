@@ -1,18 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   MutantStack.tpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vminomiy <vminomiy@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/10 01:17:38 by vminomiy          #+#    #+#             */
-/*   Updated: 2022/03/28 07:05:53 by vminomiy         ###   ########.fr       */
+/*   Created: 2022/03/30 19:56:25 by vminomiy          #+#    #+#             */
+/*   Updated: 2022/03/30 19:56:40 by vminomiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include ".hpp"
+#include (MutantStack.hpp)
 
-int		main(void) {
-	std::cout << "Gariadno" << std:endl;
-	return (0);
-}
